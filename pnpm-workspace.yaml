@@ -44,7 +44,7 @@ catalogs:
     fallow: 3.38.1
     renovate: 44.199.0
     textlint: 15.8.0
-    typescript: 7.1.0-beta
+    typescript: 7.0.2
     vite-plus: 1.4.0
 overrides:
   effect: "catalog:stack"
