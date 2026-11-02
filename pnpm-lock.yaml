@@ -256,8 +256,8 @@ catalogs:
       specifier: 3.36.0
       version: 3.36.0
     renovate:
-      specifier: 44.183.0
-      version: 44.183.0
+      specifier: 44.198.0
+      version: 44.198.0
     textlint:
       specifier: 15.8.0
       version: 15.8.0
@@ -367,7 +367,7 @@ importers:
         version: 3.36.0
       renovate:
         specifier: catalog:stack
-        version: 44.183.0(supports-color@7.2.0)(typanion@3.14.0)
+        version: 44.198.0(supports-color@7.2.0)(typanion@3.14.0)
       skills:
         specifier: 'catalog:'
         version: 1.7.4
@@ -929,8 +929,8 @@ packages:
     resolution: {integrity: sha512-sGEA473TlCvhCGNoTBY9OXZVWdscIXdGt0dm8EpB+2MRfmt8LNh/X56P/T3nCtEB+eH5qGEa3odphSAoUxSfSQ==}
     engines: {node: '>=22.12.0'}
 
-  '@containerbase/base@14.52.7':
-    resolution: {integrity: sha512-ASs/PUxj4g1lu2U1aQY/sYR6Y5jPOTyw7AvCTbVs8w4rvVD344y2iFMSy/lm4oNkVJHaQmXwIeTQOg8IuJhpGQ==}
+  '@containerbase/base@14.57.1':
+    resolution: {integrity: sha512-TaewVUnV5FM5VouI6jQeQNix83GWStGNjYTKjrurzouveI15XeVuMtCZCvlf6/aFQHNQfinhRHnzEKw71HUDTw==}
     engines: {node: '>=24.10.0'}
     peerDependencies:
       zod: ^4.6.6
@@ -2379,8 +2379,8 @@ packages:
     peerDependencies:
       '@redis/client': ^6.2.1
 
-  '@renovatebot/base-image@13.142.11':
-    resolution: {integrity: sha512-xP3JBZNHvFqt0M6/ovN4U4+l/u9tAOUI2NrOJmMoQE/bf7dvfR0xgmsu/AvexQbrFS5bTjDhtKfBcIErwyehcQ==}
+  '@renovatebot/base-image@13.149.0':
+    resolution: {integrity: sha512-xrP1E/u2ch5QnkpZMg8HE1ZNOaS/MmV3j4OAQlM+C8mX/o/yx9u2d11MQVEXVj811+PdXPlbm5g05Re4RMxuxA==}
     engines: {node: '>=24.10.0'}
     peerDependencies:
       zod: ^4.6.6
@@ -2392,17 +2392,17 @@ packages:
     resolution: {integrity: sha512-+mZxeioZUc1UAs2NO02x5RcPQdvX4B4eJsrFYSIVT8yRdtsc9OV8L/KeYnKatWFd8BxbOyr5mS8I8JbolOPVqg==}
     engines: {node: '>=22.12.0', pnpm: '>=10.0.0'}
 
-  '@renovatebot/good-enough-parser@2.0.1':
-    resolution: {integrity: sha512-FBLawccaWOPwqXgMSB3FTp1VTfGJWSTTXY2Q3kWPoLYOpKYBr3V37vtqFLjb5wUFkrXN2Sj+S840JXKfHwy8Rg==}
-    engines: {node: '>=22.12.0', pnpm: '>=10.0.0'}
+  '@renovatebot/good-enough-parser@3.0.0':
+    resolution: {integrity: sha512-dvFb9ST8WVo+YsrhK6vbWBib49Biu4/fPmZf1QRNIR1Ov5T04god/AA3rRJcyRrofzt/K96vPO9RPhEE3u+hfg==}
+    engines: {node: '>=24.10.0', pnpm: '>=10.0.0'}
 
-  '@renovatebot/osv-offline-db@3.0.12':
-    resolution: {integrity: sha512-zucy8DMvzE4JBjmobiAqk1mXnH2X7KwbZ9Q9YRw3RzevqhlBDZ+q5qQ3KLpEM1vaCpdhDUzaeJLxA5zOkNh4ww==}
-    engines: {node: '>=22.12.0', pnpm: '>=10.0.0'}
+  '@renovatebot/osv-offline-db@4.4.0':
+    resolution: {integrity: sha512-LsAsuAvLXP+naIkJ8ac2RWLo+KV20C18zP4Hl9ygM0BxAJNbCTMs8qvSelYHFsLItAwY4lEkITgBgJCHw86Lfw==}
+    engines: {node: '>=24.11.0', pnpm: '>=10.0.0'}
 
-  '@renovatebot/osv-offline@3.0.12':
-    resolution: {integrity: sha512-trFb1+hz84jtvvkJpsx/hEIktwDfyVsXIe4bWj7t5dSUHcP5JZmibE8CiR8KY9BXnqQtiig5HTRM5iwzlkQw/Q==}
-    engines: {node: '>=22.12.0', pnpm: '>=10.0.0'}
+  '@renovatebot/osv-offline@4.4.0':
+    resolution: {integrity: sha512-fEW7adrcSKve1XslE9gOWvyfNVS1zBMrEwJIlgBhkzM5hgTY2RVbqbP9GZSfgzXlhdn2ENKSaGeAgXMrVxqWxA==}
+    engines: {node: '>=24.11.0', pnpm: '>=10.0.0'}
 
   '@renovatebot/pep440@5.0.1':
     resolution: {integrity: sha512-KmMz+X68YvrS6aN6TJWtDiH8aCIL2Igcvceh17STHxMUN3KxXsC24COoOXjMOl/Gb+okBwwduMm8PY/WY/0Cpg==}
@@ -3742,8 +3742,8 @@ packages:
     resolution: {integrity: sha512-ixNtAJndqh173VQ4KodSdJEI6nuioBWI0V1ITNKhZZsO0pEMoDxz539T4FTTbSZ/xIOSuDnzxLVRqBVSvPNE2g==}
     engines: {node: '>=18.0'}
 
-  cronstrue@3.33.0:
-    resolution: {integrity: sha512-vyatYcfUXxPZxv8/zwC+j9LZNfSdn1k5t3sCLFZrLw+HvU6H4pNhUulPKgtji9tLTTAUCJs45z2+rJrPsbPxlw==}
+  cronstrue@3.38.0:
+    resolution: {integrity: sha512-i10xR7fS4AH9LKwmt3gYdt/5lSsB2qFGSNfC8aeyYybxo48DCMz+nUrSVI4kUj8yo+SgTbMJqp/BWEem9avlcA==}
     hasBin: true
 
   cross-spawn@7.0.6:
@@ -4534,8 +4534,8 @@ packages:
     resolution: {integrity: sha512-hsBTNUqQTDwkWtcdYI2i06Y/nUBEsNEDJKjWdigLvegy8kDuJAS8uRlpkkcQpyEXL0Z/pjDy5HBmMjRCJ2gq+g==}
     engines: {node: '>= 4'}
 
-  ignore@7.0.12:
-    resolution: {integrity: sha512-/8UvqAPU9DGTI9k4mxtf49U37Isfwr8Uts96+SBHIkFxPJnHS0Ew4f00sM4Scd8V8EjM0jUNtVDdv1kPdt35lg==}
+  ignore@7.0.13:
+    resolution: {integrity: sha512-2E8Q6rh+1RRSq/YdaGsNfXsEZy9FVqv6BSSrkmZJP7BnaoPnRfKL+YaofPvP+5rzdk144qSm6i4+hvPgUcbV4Q==}
     engines: {node: '>= 4'}
 
   import-fresh@3.3.1:
@@ -5760,8 +5760,8 @@ packages:
   remark@15.0.1:
     resolution: {integrity: sha512-Eht5w30ruCXgFmxVUSlNWQ9iiimq07URKeFS3hNc8cUWy1llX4KDWfyEDZRycMc+znsN9Ux5/tJ/BFdgdOwA3A==}
 
-  renovate@44.183.0:
-    resolution: {integrity: sha512-pHE4Elf13pv8VHs9MUXzyDZyDbWQArZQBi7Ps5Mxb7HzoDdyauAt/nwE7f/I1nRsM0eaJKYCQAJD+w1esKrN5A==}
+  renovate@44.198.0:
+    resolution: {integrity: sha512-TPKFkA2a8P2eChGYhnV5IeZemQS/Qpl/aEJgcHBuVf1YHLGBWnQSGQu7eLmUqUbii1vmEtVGS62TFgoQVJ9h0Q==}
     engines: {node: ^24.11.0, pnpm: ^11.0.0}
     hasBin: true
 
@@ -7398,7 +7398,7 @@ snapshots:
       conventional-commits-parser: 7.1.2
       picocolors: 1.1.1
 
-  '@containerbase/base@14.52.7(zod@4.6.7)':
+  '@containerbase/base@14.57.1(zod@4.6.7)':
     dependencies:
       semver: 7.8.5
     optionalDependencies:
@@ -8512,9 +8512,9 @@ snapshots:
     dependencies:
       '@redis/client': 6.2.1(@opentelemetry/api@1.9.1)
 
-  '@renovatebot/base-image@13.142.11(zod@4.6.7)':
+  '@renovatebot/base-image@13.149.0(zod@4.6.7)':
     dependencies:
-      '@containerbase/base': 14.52.7(zod@4.6.7)
+      '@containerbase/base': 14.57.1(zod@4.6.7)
     optionalDependencies:
       zod: 4.6.7
 
@@ -8525,27 +8525,28 @@ snapshots:
       upath: 3.0.8
       zod: 4.6.7
 
-  '@renovatebot/good-enough-parser@2.0.1':
+  '@renovatebot/good-enough-parser@3.0.0':
     dependencies:
       '@thi.ng/zipper': 1.0.3
       '@types/moo': 0.5.10
       klona: 2.0.6
       moo: 0.5.3
 
-  '@renovatebot/osv-offline-db@3.0.12(supports-color@7.2.0)':
+  '@renovatebot/osv-offline-db@4.4.0(supports-color@7.2.0)':
     dependencies:
       debug: 4.4.3(supports-color@7.2.0)
     transitivePeerDependencies:
       - supports-color
 
-  '@renovatebot/osv-offline@3.0.12(supports-color@7.2.0)':
+  '@renovatebot/osv-offline@4.4.0(supports-color@7.2.0)':
     dependencies:
-      '@renovatebot/osv-offline-db': 3.0.12(supports-color@7.2.0)
-      adm-zip: 0.6.1
+      '@renovatebot/osv-offline-db': 4.4.0(supports-color@7.2.0)
       debug: 4.4.3(supports-color@7.2.0)
       fs-extra: 11.4.1
       got: 15.1.0
       luxon: 3.7.2
+      ms: 2.1.3
+      yauzl: 3.4.0
     transitivePeerDependencies:
       - supports-color
 
@@ -10063,7 +10064,7 @@ snapshots:
 
   croner@10.0.1: {}
 
-  cronstrue@3.33.0: {}
+  cronstrue@3.38.0: {}
 
   cross-spawn@7.0.6:
     dependencies:
@@ -11074,7 +11075,7 @@ snapshots:
 
   ignore@5.3.2: {}
 
-  ignore@7.0.12: {}
+  ignore@7.0.13: {}
 
   import-fresh@3.3.1:
     dependencies:
@@ -12626,7 +12627,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  renovate@44.183.0(supports-color@7.2.0)(typanion@3.14.0):
+  renovate@44.198.0(supports-color@7.2.0)(typanion@3.14.0):
     dependencies:
       '@aws-sdk/client-codecommit': 3.1139.0
       '@aws-sdk/client-ec2': 3.1139.0
@@ -12659,10 +12660,10 @@ snapshots:
       '@pnpm/parse-overrides': 1001.0.4
       '@qnighy/marshal': 0.1.3
       '@redis/client': 6.3.0(@opentelemetry/api@1.9.1)
-      '@renovatebot/base-image': 13.142.11(zod@4.6.7)
+      '@renovatebot/base-image': 13.149.0(zod@4.6.7)
       '@renovatebot/detect-tools': 4.0.23
-      '@renovatebot/good-enough-parser': 2.0.1
-      '@renovatebot/osv-offline': 3.0.12(supports-color@7.2.0)
+      '@renovatebot/good-enough-parser': 3.0.0
+      '@renovatebot/osv-offline': 4.4.0(supports-color@7.2.0)
       '@renovatebot/pep440': 5.0.1
       '@renovatebot/pgp': 2.0.4
       '@renovatebot/ruby-semver': 5.0.0
@@ -12682,7 +12683,7 @@ snapshots:
       commander: 15.0.0
       common-tags: 1.8.2
       croner: 10.0.1
-      cronstrue: 3.33.0
+      cronstrue: 3.38.0
       deepmerge: 4.3.1
       dequal: 2.0.3
       detect-indent: 7.0.2
@@ -12704,7 +12705,7 @@ snapshots:
       got: 16.1.0
       graph-data-structure: 4.5.0
       handlebars: 4.7.10
-      ignore: 7.0.12
+      ignore: 7.0.13
       ini: 6.0.0
       json-dup-key-validator: 1.0.3
       json-stringify-pretty-compact: 4.0.0
