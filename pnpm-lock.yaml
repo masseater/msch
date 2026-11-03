@@ -179,15 +179,15 @@ catalogs:
     '@eslint-react/eslint-plugin':
       specifier: 5.28.8
       version: 5.28.8
-    '@eslint/config-helpers':
-      specifier: 0.7.0
-      version: 0.7.0
     '@html-eslint/eslint-plugin-react':
       specifier: 0.67.0
       version: 0.67.0
     '@r_masseater/oxlint-plugin-decision':
       specifier: 0.0.4
       version: 0.0.4
+    '@r_masseater/oxlint-typed-rules':
+      specifier: 0.0.1
+      version: 0.0.1
     '@shadcn/lint':
       specifier: 0.2.3
       version: 0.2.3
@@ -197,24 +197,15 @@ catalogs:
     '@tanstack/eslint-plugin-router':
       specifier: 1.162.0
       version: 1.162.0
-    '@tanstack/eslint-plugin-start':
-      specifier: 0.1.0
-      version: 0.1.0
     '@tanstack/intent':
       specifier: 0.5.6
       version: 0.5.6
     '@types/node':
       specifier: 26.6.6
       version: 26.6.6
-    '@typescript-eslint/parser':
-      specifier: 8.72.1
-      version: 8.72.1
     '@yarnpkg/parsers':
       specifier: 3.1.0
       version: 3.1.0
-    eslint:
-      specifier: 10.14.0
-      version: 10.14.0
     eslint-plugin-baseline-js:
       specifier: 0.7.7
       version: 0.7.7
@@ -280,9 +271,6 @@ overrides:
 
 packageExtensionsChecksum: sha256-UoeDPdVJlHAcCJ2gi51cFcqdMlCrOXaY2vq0XL5Rcuw=
 
-patchedDependencies:
-  '@tanstack/eslint-plugin-start@0.1.0': 364cc40b73326fe59c5d685ac247690de2302e3e731b7b7d37583701f9370644
-
 importers:
 
   .:
@@ -302,15 +290,15 @@ importers:
       '@eslint-react/eslint-plugin':
         specifier: 'catalog:'
         version: 5.28.8(eslint@10.14.0(jiti@2.6.1)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@6.0.3)
-      '@eslint/config-helpers':
-        specifier: 'catalog:'
-        version: 0.7.0
       '@html-eslint/eslint-plugin-react':
         specifier: 'catalog:'
         version: 0.67.0(eslint@10.14.0(jiti@2.6.1)(supports-color@7.2.0))
       '@r_masseater/oxlint-plugin-decision':
         specifier: 'catalog:'
         version: 0.0.4(oxlint@1.89.0(oxlint-tsgolint@7.0.2004)(vite-plus@1.4.0(@opentelemetry/api@1.9.1)(@types/node@26.6.6)(@vitest/ui@5.0.5)(esbuild@0.28.1)(jiti@2.6.1)(terser@5.51.2)(typescript@6.0.3)(yaml@2.9.1)))(redis@6.2.1(@opentelemetry/api@1.9.1))
+      '@r_masseater/oxlint-typed-rules':
+        specifier: 'catalog:'
+        version: 0.0.1(redis@6.2.1(@opentelemetry/api@1.9.1))
       '@shadcn/lint':
         specifier: 'catalog:'
         version: 0.2.3(@typescript-eslint/parser@8.72.1(eslint@10.14.0(jiti@2.6.1)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@6.0.3))(eslint@10.14.0(jiti@2.6.1)(supports-color@7.2.0))
@@ -320,9 +308,6 @@ importers:
       '@tanstack/eslint-plugin-router':
         specifier: 'catalog:'
         version: 1.162.0(eslint@10.14.0(jiti@2.6.1)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@6.0.3)
-      '@tanstack/eslint-plugin-start':
-        specifier: 'catalog:'
-        version: 0.1.0(patch_hash=364cc40b73326fe59c5d685ac247690de2302e3e731b7b7d37583701f9370644)(eslint@10.14.0(jiti@2.6.1)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@6.0.3)
       '@tanstack/intent':
         specifier: 'catalog:'
         version: 0.5.6
@@ -332,15 +317,9 @@ importers:
       '@types/node':
         specifier: 'catalog:'
         version: 26.6.6
-      '@typescript-eslint/parser':
-        specifier: 'catalog:'
-        version: 8.72.1(eslint@10.14.0(jiti@2.6.1)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@6.0.3)
       effect:
         specifier: 4.0.7
         version: 4.0.7
-      eslint:
-        specifier: 'catalog:'
-        version: 10.14.0(jiti@2.6.1)(supports-color@7.2.0)
       eslint-plugin-baseline-js:
         specifier: 'catalog:'
         version: 0.7.7(eslint@10.14.0(jiti@2.6.1)(supports-color@7.2.0))
@@ -2322,6 +2301,10 @@ packages:
     peerDependencies:
       oxlint: '>=1.87.0'
 
+  '@r_masseater/oxlint-typed-rules@0.0.1':
+    resolution: {integrity: sha512-BSQ3bXz3FIRG95P5uwPjBh08bSpOkOZxtxAghgfknbXSezthZeRnFYYD8CanB7NNbQcDe7hoZuA4ca8zWnWwQA==}
+    engines: {node: '>=26'}
+
   '@redis/bloom@6.2.1':
     resolution: {integrity: sha512-huQgNLaCIZfQ9SeLn4q9124uOUd8HbZDYHwwUzNcRgHqCHiHKl2dDxMqJCeWh8cMqZAoWuHR8XnWbDMIf+o7ag==}
     engines: {node: '>= 20.0.0'}
@@ -2589,12 +2572,6 @@ packages:
     resolution: {integrity: sha512-0mv+5fOnWXeorh6zd3VyHVfpejIzc7+z68Ts0CQMDzMiwjM5rvea46fyl2m50zx5JFennsu7RO/QJAfnqkKJXw==}
     peerDependencies:
       eslint: ^8.57.0 || ^9.0.0 || ^10.0.0
-
-  '@tanstack/eslint-plugin-start@0.1.0':
-    resolution: {integrity: sha512-7Dz5NAO9h9fSw+W5cl2wTd452Owq5J6OHhfmz4hsp+tYM8kMteKX1sZPRL+9ASvGQYgOAQuMub3oBLp8yi2fag==}
-    peerDependencies:
-      eslint: ^8.57.0 || ^9.0.0
-      typescript: '>=4.7.0'
 
   '@tanstack/intent@0.5.6':
     resolution: {integrity: sha512-9Ta/GMGPcqBIqlbrqeYyqBVKEP7XyAXy6nn90bPiE2oHB6KPgjEweUbHNXLQ6Pim01VtMMNf0dmUFMGKKHXmlw==}
@@ -4355,10 +4332,6 @@ packages:
   global-directory@5.0.0:
     resolution: {integrity: sha512-1pgFdhK3J2LeM+dVf2Pd424yHx2ou338lC0ErNP2hPx4j8eW1Sp0XqSjNxtk6Tc4Kr5wlWtSvz8cn2yb7/SG/w==}
     engines: {node: '>=20'}
-
-  globals@16.5.0:
-    resolution: {integrity: sha512-c/c15i26VrJ4IRt5Z89DnIzCGDn9EcebibhAOjw5ibqEHsE1wLUgkPn9RDmNcUKyU87GeaL633nyJ+pplFR2ZQ==}
-    engines: {node: '>=18'}
 
   globalthis@1.0.4:
     resolution: {integrity: sha512-DpLKbNU4WylpxJykQujfCcwYWiV/Jhm50Goo0wrVILAv5jOr9d+H+UR3PhSCD2rCCEIg0uc+G+muBTwD54JhDQ==}
@@ -8447,6 +8420,16 @@ snapshots:
       - redis
       - utf-8-validate
 
+  '@r_masseater/oxlint-typed-rules@0.0.1(redis@6.2.1(@opentelemetry/api@1.9.1))':
+    dependencies:
+      '@effect/platform-node': 4.0.7(effect@4.0.7)(redis@6.2.1(@opentelemetry/api@1.9.1))
+      effect: 4.0.7
+      typescript: 6.0.3
+    transitivePeerDependencies:
+      - bufferutil
+      - redis
+      - utf-8-validate
+
   '@redis/bloom@6.2.1(@redis/client@6.2.1(@opentelemetry/api@1.9.1))':
     dependencies:
       '@redis/client': 6.2.1(@opentelemetry/api@1.9.1)
@@ -8646,15 +8629,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
       - typescript
-
-  '@tanstack/eslint-plugin-start@0.1.0(patch_hash=364cc40b73326fe59c5d685ac247690de2302e3e731b7b7d37583701f9370644)(eslint@10.14.0(jiti@2.6.1)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@6.0.3)':
-    dependencies:
-      '@typescript-eslint/utils': 8.70.1(eslint@10.14.0(jiti@2.6.1)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@6.0.3)
-      eslint: 10.14.0(jiti@2.6.1)(supports-color@7.2.0)
-      globals: 16.5.0
-      typescript: 6.0.3
-    transitivePeerDependencies:
-      - supports-color
 
   '@tanstack/intent@0.5.6': {}
 
@@ -9021,6 +8995,7 @@ snapshots:
       typescript: 6.0.3
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
   '@typescript-eslint/project-service@8.70.1(supports-color@7.2.0)(typescript@6.0.3)':
     dependencies:
@@ -10823,8 +10798,6 @@ snapshots:
   global-directory@5.0.0:
     dependencies:
       ini: 6.0.0
-
-  globals@16.5.0: {}
 
   globalthis@1.0.4:
     dependencies:
