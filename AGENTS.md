@@ -85,7 +85,7 @@ release. Add a tool name to select part of the graph. For example, run
 
 ## 脆弱性
 
-- `audit` は `vp pm audit --fix` で直す。修正版の無い勧告だけを `auditConfig.ignoreGhsas` に載せ、理由をコミットメッセージに書く。
+- `audit` は `vp pm audit --fix` で直す。修正版の無い勧告だけを `audit.ignore` に載せ、理由をコミットメッセージに書く。
 
 ## 公開先
 
