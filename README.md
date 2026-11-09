@@ -1,13 +1,16 @@
-# vocablint
+# msch
 
-vocablint keeps one owner for each set of values and object shape in a TypeScript repository.
+msch is masseater's checker suite. Each check lives under one command, and the suite grows by adding checks rather than new tools.
+
+The first check is the vocabulary check, formerly vocablint.
+It keeps one owner for each set of values and object shape in a TypeScript repository.
 It finds code that restates one already defined elsewhere.
 
-A union such as `"asc" | "desc"` gets copied into a component, an API schema and a test. When someone adds `"none"` to one of them, the copies silently drift apart. vocablint reports each copy and names the owner to derive it from. An owner is a constant you register in your repository, or a type exported by a dependency. It runs on the TypeScript type checker alone, so it costs nothing to run and gives the same answer every time.
+A union such as `"asc" | "desc"` gets copied into a component, an API schema and a test. When someone adds `"none"` to one of them, the copies silently drift apart. The vocabulary check reports each copy and names the owner to derive it from. An owner is a constant you register in your repository, or a type exported by a dependency. It runs on the TypeScript type checker alone, so it costs nothing to run and gives the same answer every time.
 
-vocablint is not on npm yet. Build it from this repository as shown below.
+msch is not on npm yet. Build it from this repository as shown below.
 
-## What it reports
+## What the vocabulary check reports
 
 - A set of values that restates a registered owner, or extends it with extra values
 - A literal written by hand where a type derived from an owner is expected
@@ -19,28 +22,28 @@ vocablint is not on npm yet. Build it from this repository as shown below.
 You need Node.js 26 or later and [Vite+](https://viteplus.dev/guide/) (`vp`).
 
 ```sh
-git clone https://github.com/masseater/vocablint.git
-cd vocablint
+git clone https://github.com/masseater/msch.git
+cd msch
 vp install
-vp run --filter @r_masseater/vocablint build
+vp run --filter @r_masseater/msch build
 ```
 
-The CLI is now at `tools/vocablint/dist/cli.mjs`.
+The CLI is now at `tools/msch/dist/cli.mjs`.
 
 ## Use it
 
-Register an owner by adding the `@vocablint` tag and a concept ID to a top-level `const`.
+Register an owner by adding the `@msch` tag and a concept ID to a top-level `const`.
 
 ```ts
 // src/sort.ts
-/** @vocablint sort-order */
+/** @msch sort-order */
 export const SORT_ORDERS = ["asc", "desc"] as const;
 ```
 
 Then run the CLI at the root of your repository. It type-checks every `tsconfig.json` under the current directory.
 
 ```sh
-node path/to/vocablint/tools/vocablint/dist/cli.mjs
+node path/to/msch/tools/msch/dist/cli.mjs
 ```
 
 A file that writes the same values again is reported, and the command exits with code 1.

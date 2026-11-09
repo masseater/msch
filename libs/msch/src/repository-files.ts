@@ -15,7 +15,7 @@ class RepositoryFiles extends Context.Service<
     readonly dirname: (file: string) => string;
     readonly basename: (file: string) => string;
   }
->()("@vocablint/core/repository-files/RepositoryFiles") {}
+>()("@msch/core/repository-files/RepositoryFiles") {}
 
 const nodeRepositoryFiles = Layer.effect(
   RepositoryFiles,

@@ -46,14 +46,14 @@ release. Add a tool name to select part of the graph. For example, run
 
 - `vp run verify` は、ルートの `vp check` にテスト・fallow・gitleaks・audit などの検査を束ねたタスクである。pre-push フックと Stop フックも同じ verify を走らせる。
 - `vp check` は oxlint-plugin-decision の判定に `.env` の `OPENROUTER_API_KEY` を使う。`.env.example` を写して作る。
-- テストを 1 つだけ走らせるときは、`libs/vocablint` か `tools/vocablint` で `vp test run <ファイル>` を実行する。
-- `tools/vocablint` の `vp run build` は、`vp pack` で CLI と oxlint プラグインを `dist/` に出す。
+- テストを 1 つだけ走らせるときは、`libs/msch` か `tools/msch` で `vp test run <ファイル>` を実行する。
+- `tools/msch` の `vp run build` は、`vp pack` で CLI と oxlint プラグインを `dist/` に出す。
 
 ## 構成
 
-- 検査の本体は `libs/vocablint`（`@vocablint/core`）にある。`tools/vocablint` は npm に出す `@r_masseater/vocablint` で、CLI と oxlint プラグインだけを持つ。
+- 検査の本体は `libs/msch`（`@msch/core`）にある。`tools/msch` は npm に出す `@r_masseater/msch` で、CLI と oxlint プラグインだけを持つ。
 - 解析には `typescript-6` の別名で入れた TypeScript 6 の API を使う。`typescript` は 7 系の tsgo で、このリポジトリ自身の型検査に使う。
-- `checkRepository` は、tsconfig.json ごとにプログラムを作る。全プロジェクトから `@vocablint` の持ち主を集めてから各プロジェクトを解析し、最後に持ち主の無い値の集合の重複を突き合わせる。
+- `checkRepository` は、tsconfig.json ごとにプログラムを作る。全プロジェクトから `@msch` の持ち主を集めてから各プロジェクトを解析し、最後に持ち主の無い値の集合の重複を突き合わせる。
 
 ## 環境変数
 

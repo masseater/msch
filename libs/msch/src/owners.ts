@@ -27,7 +27,7 @@ interface Annotated {
   readonly conceptId: string;
 }
 
-const OWNER_TAG = "vocablint";
+const OWNER_TAG = "msch";
 const FIRST_OWNER_COUNT = 1;
 
 const ownerKeyOf = (declaration: ts.Declaration): Option.Option<string> => {

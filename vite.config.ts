@@ -154,7 +154,7 @@ export default defineConfig({
         rules: { "import/no-default-export": "off" },
       },
       {
-        files: ["tools/vocablint/src/oxlint.ts"],
+        files: ["tools/msch/src/oxlint.ts"],
         rules: {
           "import/no-default-export": "off",
           "import/no-nodejs-modules": "off",
