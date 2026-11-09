@@ -6,7 +6,7 @@ import { findingsIn, fixtureLayer } from "./repository.test.support.ts";
 
 const STATUS_OWNER = pipe(
   [
-    "/** @vocablint order.status */",
+    "/** @msch order.status */",
     'export const ORDER_STATUSES = ["draft", "published", "archived"] as const;',
     "export type OrderStatus = (typeof ORDER_STATUSES)[number];",
     "",
@@ -60,17 +60,17 @@ const reportsAnnotationsThatCannotRegisterAnOw = Effect.gen(
     const findings = yield* findingsIn({
       "src/owners.ts": pipe(
         [
-          "/** @vocablint */",
+          "/** @msch */",
           'export const NAMELESS = ["a", "b"] as const;',
-          "/** @vocablint letters */",
+          "/** @msch letters */",
           "export const COUNT = 1;",
-          "/** @vocablint letters */",
+          "/** @msch letters */",
           'export type Letter = "a" | "b";',
-          "/** @vocablint colors */",
+          "/** @msch colors */",
           'export const COLORS = ["red", "blue"] as const;',
-          "/** @vocablint colors */",
+          "/** @msch colors */",
           'export const HUES = ["green", "cyan"] as const;',
-          "/** @vocablint tones */",
+          "/** @msch tones */",
           'export const TONES = ["red", "blue"] as const;',
           "",
         ],

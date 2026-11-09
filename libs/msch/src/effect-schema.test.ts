@@ -13,7 +13,7 @@ const readsLiteralSetsFromSchemaLiteralsAndUni = Effect.gen(
       "src/a.ts": pipe(
         [
           'import { Schema } from "effect";',
-          "/** @vocablint order.status */",
+          "/** @msch order.status */",
           'export const OrderStatus = Schema.Literals(["draft", "published"]);',
           'export const Restated = Schema.Literals(["draft", "published"]);',
           'export const Unioned = Schema.Union([Schema.Literal("a"), Schema.Literal("b")]);',
@@ -37,7 +37,7 @@ const acceptsSchemasBuiltFromTheOwner = Effect.gen(function* acceptsSchemasBuilt
     "src/a.ts": pipe(
       [
         'import { Schema } from "effect";',
-        "/** @vocablint order.status */",
+        "/** @msch order.status */",
         'export const OrderStatus = Schema.Literals(["draft", "published"]);',
         "export const Spread = Schema.Literals([...OrderStatus.literals]);",
         'export const Titled = OrderStatus.annotate({ title: "status" });',

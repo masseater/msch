@@ -6,8 +6,8 @@ import {
   checkRepository,
   formatProblem,
   nodeRepositoryFiles,
-} from "@vocablint/core";
-import type { Problem } from "@vocablint/core";
+} from "@msch/core";
+import type { Problem } from "@msch/core";
 import { Cause, Effect, Layer, Option, Schema, Stdio, Stream, Array as Arr, pipe } from "effect";
 
 import { JSON_FLAG } from "./cli-contract.ts";
@@ -49,7 +49,9 @@ const reportText = (
     return yield* Effect.void;
   });
 
-const vocablint = Effect.gen(function* vocablint() {
+const VOCABULARY_COMMAND = "vocabulary";
+
+const vocabulary = Effect.gen(function* vocabulary() {
   const stdio = yield* Stdio.Stdio;
   const files = yield* RepositoryFiles;
   const args = yield* stdio.args;
@@ -60,6 +62,16 @@ const vocablint = Effect.gen(function* vocablint() {
     return yield* writeStdout(text);
   }
   return yield* reportText(root, problems);
+});
+
+const msch = Effect.gen(function* msch() {
+  const stdio = yield* Stdio.Stdio;
+  const args = yield* stdio.args;
+  const [command] = args;
+  if (command === VOCABULARY_COMMAND) {
+    return yield* vocabulary;
+  }
+  return yield* vocabulary;
 });
 
 const reportFailure = <Failure>(
@@ -86,4 +98,4 @@ const runCli = <Value, Failure>(
   runMain(main, { disableErrorReporting: true });
 };
 
-runCli(vocablint);
+runCli(msch);

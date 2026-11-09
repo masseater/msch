@@ -21,7 +21,7 @@ class FixtureFiles extends Context.Service<
     readonly writeFile: (file: string, source: string) => Effect.Effect<void>;
     readonly symlink: (target: string, link: string) => Effect.Effect<void>;
   }
->()("@vocablint/core/repository.test.support/FixtureFiles") {}
+>()("@msch/core/repository.test.support/FixtureFiles") {}
 
 const fixtureFiles = Layer.effect(
   FixtureFiles,
@@ -31,7 +31,7 @@ const fixtureFiles = Layer.effect(
     const makeParent = (file: string): Effect.Effect<void> =>
       fs.makeDirectory(path.dirname(file), { recursive: true }).pipe(Effect.orDie);
     return FixtureFiles.of({
-      makeTempDirectory: fs.makeTempDirectoryScoped({ prefix: "vocablint-" }).pipe(Effect.orDie),
+      makeTempDirectory: fs.makeTempDirectoryScoped({ prefix: "msch-" }).pipe(Effect.orDie),
       writeFile: (file, source) =>
         makeParent(file).pipe(Effect.andThen(fs.writeFileString(file, source)), Effect.orDie),
       symlink: (target, link) =>

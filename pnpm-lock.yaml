@@ -379,7 +379,7 @@ importers:
         specifier: 'catalog:'
         version: 26.6.6
 
-  libs/vocablint:
+  libs/msch:
     dependencies:
       '@effect/platform-node':
         specifier: 'catalog:'
@@ -407,7 +407,7 @@ importers:
         specifier: 'catalog:'
         version: 5.0.5(@opentelemetry/api@1.9.1)(@types/node@26.6.6)(@vitest/browser-preview@5.0.5)(@vitest/ui@5.0.5)(@voidzero-dev/vite-plus-core@1.4.0(@types/node@26.6.6)(esbuild@0.28.1)(jiti@2.6.1)(terser@5.51.2)(typescript@7.0.2)(yaml@2.9.1))(esbuild@0.28.1)(jiti@2.6.1)(terser@5.51.2)(typescript@7.0.2)(yaml@2.9.1)
 
-  tools/vocablint:
+  tools/msch:
     dependencies:
       '@effect/platform-node':
         specifier: 'catalog:'
@@ -419,12 +419,12 @@ importers:
         specifier: 'catalog:'
         version: '@typescript/typescript6@6.0.2'
     devDependencies:
+      '@msch/core':
+        specifier: workspace:*
+        version: link:../../libs/msch
       '@types/node':
         specifier: 'catalog:'
         version: 26.6.6
-      '@vocablint/core':
-        specifier: workspace:*
-        version: link:../../libs/vocablint
       typescript:
         specifier: catalog:stack
         version: 7.0.2

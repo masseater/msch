@@ -1,5 +1,5 @@
-import { POSITION_BASE, describeFinding } from "@vocablint/core";
-import type { Problem } from "@vocablint/core";
+import { POSITION_BASE, describeFinding } from "@msch/core";
+import type { Problem } from "@msch/core";
 import { Array as Arr, pipe } from "effect";
 import type { Diagnostic, Plugin, Rule } from "vite-plus/lint/plugins";
 
@@ -24,10 +24,10 @@ const vocabularyRule = (load: ProblemLoader): Rule => ({
   }),
 });
 
-const vocablintPlugin = (load: ProblemLoader): Plugin & { rules: { vocabulary: Rule } } => ({
-  meta: { name: "vocablint" },
+const mschPlugin = (load: ProblemLoader): Plugin & { rules: { vocabulary: Rule } } => ({
+  meta: { name: "msch" },
   rules: { vocabulary: vocabularyRule(load) },
 });
 
-export { vocablintPlugin };
+export { mschPlugin };
 export type { ProblemLoader };

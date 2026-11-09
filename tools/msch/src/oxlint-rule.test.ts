@@ -1,8 +1,8 @@
-import type { Problem } from "@vocablint/core";
+import type { Problem } from "@msch/core";
 import { RuleTester } from "vite-plus/lint/plugins-dev";
 import { describe, it } from "vite-plus/test";
 
-import { vocablintPlugin } from "./oxlint-rule.ts";
+import { mschPlugin } from "./oxlint-rule.ts";
 
 const CWD = "/repository";
 const FLAGGED = "/repository/src/flagged.ts";
@@ -22,7 +22,7 @@ RuleTester.it = (text, body): void => {
   it(text, body);
 };
 
-new RuleTester({ cwd: CWD }).run("vocabulary", vocablintPlugin(() => [problem]).rules.vocabulary, {
+new RuleTester({ cwd: CWD }).run("vocabulary", mschPlugin(() => [problem]).rules.vocabulary, {
   valid: [{ code: "type Order = string;\n", filename: "/repository/src/clean.ts" }],
   invalid: [
     {

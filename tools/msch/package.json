@@ -1,5 +1,5 @@
 {
-  "name": "@r_masseater/vocablint",
+  "name": "@r_masseater/msch",
   "version": "0.0.0",
   "description": "Point every finite value set and object shape at the one place that already owns it: a registered owner in the repository or a dependency type.",
   "keywords": [
@@ -8,18 +8,18 @@
     "typescript",
     "vocabulary"
   ],
-  "homepage": "https://github.com/masseater/vocablint#readme",
+  "homepage": "https://github.com/masseater/msch#readme",
   "bugs": {
-    "url": "https://github.com/masseater/vocablint/issues"
+    "url": "https://github.com/masseater/msch/issues"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/masseater/vocablint.git",
-    "directory": "tools/vocablint"
+    "url": "git+https://github.com/masseater/msch.git",
+    "directory": "tools/msch"
   },
   "bin": {
-    "vocablint": "./dist/cli.mjs"
+    "msch": "./dist/cli.mjs"
   },
   "files": [
     "dist"
@@ -47,8 +47,8 @@
     "typescript-6": "catalog:"
   },
   "devDependencies": {
+    "@msch/core": "workspace:*",
     "@types/node": "catalog:",
-    "@vocablint/core": "workspace:*",
     "typescript": "catalog:stack",
     "vite-plus": "catalog:stack"
   },
