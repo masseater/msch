@@ -2,7 +2,9 @@
 
 msch is masseater's checker suite. Each check lives under one command, and the suite grows by adding checks rather than new tools.
 
-The first check is the vocabulary check, formerly vocablint. The suite also provides masseater's shared oxlint configuration and custom rules as the `oxlint-masseater-plugin` package, so repositories take their lint rules from the same place as their checks.
+The first check is the vocabulary check, formerly vocablint.
+The suite also provides masseater's shared oxlint configuration and custom rules as the `oxlint-masseater-plugin` package.
+Repositories take their lint rules from the same place as their checks.
 It keeps one owner for each set of values and object shape in a TypeScript repository.
 It finds code that restates one already defined elsewhere.
 
