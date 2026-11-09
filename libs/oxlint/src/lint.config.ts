@@ -137,20 +137,19 @@ const requiredStack: Readonly<Record<string, readonly string[]>> = {
   ],
 };
 
-const requiredStackEntries = pipe(
-  Rec.toEntries(requiredStack),
-  Arr.flatMap(([message, modules]) =>
-    pipe(
-      modules,
-      Arr.map((module) => ({ message, module })),
-    ),
+const requiredStackEntries = Arr.flatMap(Rec.toEntries(requiredStack), ([message, modules]) =>
+  pipe(
+    modules,
+    Arr.map((module) => ({ message, module })),
   ),
 );
 
-const requiredStackPaths: readonly Readonly<{ name: string; message: string }>[] = pipe(
-  requiredStackEntries,
-  Arr.filter(({ module }) => !Str.includes("*")(module)),
-  Arr.map(({ message, module }) => ({ name: module, message })),
+const requiredStackPaths: readonly Readonly<{ name: string; message: string }>[] = Arr.map(
+  pipe(
+    requiredStackEntries,
+    Arr.filter(({ module }) => !Str.includes("*")(module)),
+  ),
+  ({ message, module }) => ({ name: module, message }),
 );
 
 const requiredStackPatterns: readonly Readonly<{ group: readonly string[]; message: string }>[] =
@@ -188,6 +187,10 @@ const generated = [
   "AGENTS.md",
   "skills-lock.json",
   "CHANGELOG.md",
+  "tools/scrap-userscript/release/**",
+  "tools/pod-rattle-parity/engine.gen.js",
+  "**/*.d.rpp.ts",
+  "**/src-tauri/gen/**",
 ];
 
 const asErrors = (names: readonly string[]): Readonly<Record<string, "error">> =>
@@ -246,7 +249,13 @@ const decisionTestRules = pipe(
   Rec.map(() => "off" as const),
 );
 
+const shadcnRestyleContracts = [
+  { pattern: "^Table(Head|Cell)$", allow: ["text-alignment", "fvn-spacing"] },
+  { pattern: "^TableCaption$", allow: ["caption", "text-alignment", "mt-*", "mb-*"] },
+];
+
 export {
+  shadcnRestyleContracts,
   allRulesOf,
   decisionPluginName,
   decisionRules,
